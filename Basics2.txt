@@ -17,5 +17,5 @@ Syntax:
 
 window.property_name;
 
-Eg:-Closed:
+Eg:-Closed
 

@@ -1,5 +1,3 @@
-let mockData = [];
-
 let api = fetch('https://restcountries.com/v3.1/all')
 .then(response => response.json())
 .then(data => {

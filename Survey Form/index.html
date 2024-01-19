@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form action="#">
+      <div class="name">
+        <label for="name">Name</label> <br />
+        <input
+          type="text"
+          name="firstname"
+          id="name"
+          placeholder="First Name"
+          required
+        />
+        <input
+          type="text"
+          name="lastname"
+          id="name"
+          placeholder="Last Name"
+          required
+        /><br />
+        <!-- <span>First</span>
+        <span>Last</span> -->
+      </div>
+      <div class="email">
+        <label for="email">Email</label><br />
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="Email"
+          required
+        />
+      </div>
+
+      <div class="star-rating">
+        <h3>Your Experience</h3>
+        <span class="star">★ </span>
+        <span class="star">★ </span>
+        <span class="star">★ </span>
+        <span class="star">★ </span>
+        <span class="star">★ </span>
+        <p>Overall, how you would rate you experience with us?</p>
+      </div>
+
+      <div class="rating">
+        <h3>How satisfied are you with</h3>
+        <div class="rating-heading">
+          <label>Very Unsatisfied</label>
+          <label>Unsatisfied</label>
+          <label>Neutral</label>
+          <label>Satisfied</label>
+          <label>Very Satisfied</label>
+        </div>
+
+        <div class="rating-content rating-grey">
+          <span class="rating-name">Purchase</span>
+          <input type="radio" name="purchase" id="very-unsatisfied" />
+          <input type="radio" name="purchase" id="unsatisfied" />
+          <input type="radio" name="purchase" id="netrual" />
+          <input type="radio" name="purchase" id="satisfied" />
+          <input type="radio" name="purchase" id="very-satisfied" />
+        </div>
+        <div class="rating-content rating-white">
+          <span class="rating-name">Service</span>
+          <input type="radio" name="service" id="very-unsatisfied" />
+          <input type="radio" name="service" id="unsatisfied" />
+          <input type="radio" name="service" id="netrual" />
+          <input type="radio" name="service" id="satisfied" />
+          <input type="radio" name="service" id="very-satisfied" />
+        </div>
+        <div class="rating-content rating-grey">
+          <span class="rating-name">Company-Overall</span>
+
+          <input type="radio" name="company-overall" id="very-unsatisfied" />
+          <input type="radio" name="company-overall" id="unsatisfied" />
+          <input type="radio" name="company-overall" id="netrual" />
+          <input type="radio" name="company-overall" id="satisfied" />
+          <input type="radio" name="company-overall" id="very-satisfied" />
+        </div>
+      </div>
+
+      <div class="rating">
+        <h3>How likely are you to</h3>
+        <div class="rating-heading">
+          <label>Very Unlikely</label>
+          <label>Unlikely</label>
+          <label>Neutral</label>
+          <label>Likely</label>
+          <label>Very Likely</label>
+        </div>
+        <div class="rating-content rating-grey">
+          <span class="rating-name">Buy from us again</span>
+          <input type="radio" name="buy-us" id="very-unlikely" />
+          <input type="radio" name="buy-us" id="unlikely" />
+          <input type="radio" name="buy-us" id="netrual" />
+          <input type="radio" name="buy-us" id="likely" />
+          <input type="radio" name="buy-us" id="very-likely" />
+        </div>
+        <div class="rating-content rating-white">
+          <span class="rating-name">Recommend our product to others</span>
+          <input type="radio" name="product-others" id="very-unlikely" />
+          <input type="radio" name="product-others" id="unlikely" />
+          <input type="radio" name="product-others" id="netrual" />
+          <input type="radio" name="product-others" id="likely" />
+          <input type="radio" name="product-others" id="very-likely" />
+        </div>
+        <div class="rating-content rating-grey">
+          <span class="rating-name">Recommend our company to others</span>
+          <input type="radio" name="company-others" id="very-unlikely" />
+          <input type="radio" name="company-others" id="unlikely" />
+          <input type="radio" name="company-others" id="netrual" />
+          <input type="radio" name="company-others" id="likely" />
+          <input type="radio" name="company-others" id="very-likely" />
+        </div>
+      </div>
+
+      <div class="comments">
+        <h3>Additional Comments or Suggestions</h3>
+        <textarea class="text-box" placeholder="Enter your comments"></textarea>
+      </div>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 1rem;
+}
+
+.name label,
+.email label {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.name input,
+.email input {
+  height: 2.5rem;
+  width: 10vw;
+  padding: 0.3rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.star-rating {
+  font-size: 1rem;
+}
+
+.star-rating p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.rating h3 {
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.rating-content {
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.rating-heading {
+  width: 40vw;
+  display: flex;
+  margin-bottom: 1rem;
+  margin-left: 10rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-size: 1rem;
+}
+.rating-grey {
+  background-color: rgba(128, 128, 128, 0.5);
+}
+.rating-white {
+  background-color: rgba(128, 128, 128, 0);
+}
+
+.rating-name {
+  width: 5rem;
+}
+
+.comments h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.text-box {
+  width: 40vw;
+  height: 20vh;
+  padding: 0.5rem;
+}
+
+.btn {
+  margin-top: 1rem;
+  background-color: rgba(128, 128, 128, 0.5);
+  border: 1px solid grey;
+  font-size: 1rem;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .body {
+    margin: 0.5rem;
+  }
+
+  .rating-heading {
+    width: 80%;
+    margin-left: 2rem;
+    font-size: 0.8rem;
+    margin-left: 5rem;
+  }
+
+  .rating-content {
+    width: 100%;
+  }
+
+  .name input,
+  .email input {
+    width: auto;
+  }
+
+  .text-box {
+    width: 100%;
+  }
+}

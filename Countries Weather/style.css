@@ -1,0 +1,11 @@
+.card-container {
+  width: 80%;
+}
+
+.my-brand-image {
+  object-position: center;
+
+  object-fit: contain;
+  max-height: 200px;
+  height: 200px;
+}

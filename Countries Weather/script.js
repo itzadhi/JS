@@ -10,7 +10,7 @@ function displayData(data) {
 
   let header = document.createElement('h1');
   header.id = 'title';
-  header.classList.add('text-center', 'fs-2');
+  header.classList.add('text-center');
   header.innerText = 'Rest Countries with Weather Details';
 
   let container = document.createElement('div');

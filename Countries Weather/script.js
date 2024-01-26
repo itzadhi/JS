@@ -1,7 +1,11 @@
 const restCountries = async () => {
-  const response = await fetch('https://restcountries.com/v3.1/all');
-  const data = await response.json();
-  return displayData(data);
+  try {
+    const response = await fetch('https://restcountries.com/v3.1/all');
+    const data = await response.json();
+    return displayData(data);
+  } catch (error) {
+    console.log('Error');
+  }
 };
 
 function displayData(data) {
@@ -17,7 +21,7 @@ function displayData(data) {
   container.id = 'card';
   container.classList.add('row');
 
-  for (let i = 0; i < data.length; i++) {
+  for (let i = 0; i < 20; i++) {
     let cardWrapper = document.createElement('div'); //'card', 'bg-dark', 'm-3',
     cardWrapper.classList.add(
       'col-xl-4',

@@ -30,15 +30,15 @@ tableWrapper.classList.add('align-items-center');
 tableWrapper.classList.add('mt-3');
 let table = document.createElement('table');
 
-let th1 = document.createElement('th');
-th1.innerText = 'ID';
-th1.classList.add('table-primary');
-let th2 = document.createElement('th');
-th2.innerText = 'Name';
-th2.classList.add('table-primary');
-let th3 = document.createElement('th');
-th3.innerText = 'Email';
-th3.classList.add('table-primary');
+// let th1 = document.createElement('th');
+// th1.innerText = 'ID';
+// th1.classList.add('table-primary');
+// let th2 = document.createElement('th');
+// th2.innerText = 'Name';
+// th2.classList.add('table-primary');
+// let th3 = document.createElement('th');
+// th3.innerText = 'Email';
+// th3.classList.add('table-primary');
 
 var tr_head = document.createElement('tr');
 // tr_head.classList.add('table-success');

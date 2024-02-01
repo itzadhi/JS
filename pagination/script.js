@@ -1,12 +1,14 @@
 import mockData from './paginationData.js';
 
 var main_container = document.createElement('div');
-main_container.classList.add('container');
-main_container.classList.add('d-flex');
-main_container.classList.add('justify-content-center');
-main_container.classList.add('align-items-center');
-main_container.classList.add('flex-wrap');
-main_container.classList.add('m-1');
+main_container.classList.add(
+  'container',
+  'd-flex',
+  'justify-content-center',
+  'align-items-center',
+  'flex-wrap',
+  'm-1'
+);
 
 let header = document.createElement('h1');
 header.id = 'title';
@@ -21,14 +23,16 @@ description.classList.add('text-center');
 
 //Creating Table headers
 let tableWrapper = document.createElement('div');
-tableWrapper.classList.add('table');
-tableWrapper.classList.add('table-bordered');
-tableWrapper.classList.add('table-responsive');
-tableWrapper.classList.add('d-flex');
-tableWrapper.classList.add('justify-content-center');
-tableWrapper.classList.add('align-items-center');
-tableWrapper.classList.add('mt-3');
+tableWrapper.classList.add(
+  'table',
+  'table-bordered',
+  'table-responsive',
+  'd-flex',
+  'justify-content-center',
+  'mt-4'
+);
 let table = document.createElement('table');
+table.classList.add('table', 'w-auto');
 
 // let th1 = document.createElement('th');
 // th1.innerText = 'ID';
@@ -62,9 +66,9 @@ function displayData(data, count, page) {
     // var td3 = document.createElement('td'); //data cells
 
     tr.innerHTML = `
-    <td class="text-center p-3">${data[i].id}</td>
-    <td class="text-center p-3">${data[i].name}</td>
-    <td class="text-center ">${data[i].email}</td>
+    <td class="text-center p-2">${data[i].id}</td>
+    <td class="text-center p-2">${data[i].name}</td>
+    <td class="text-center p-2">${data[i].email}</td>
     `;
     // //ID
     // td1.innerText = data[i].id;
@@ -89,10 +93,12 @@ tableWrapper.append(table);
 //Pagination;
 let pager = document.createElement('div');
 pager.id = 'buttons';
-pager.classList.add('d-flex');
-pager.classList.add('justify-content-center');
-pager.classList.add('align-items-center');
-pager.classList.add('flex-wrap');
+pager.classList.add(
+  'd-flex',
+  'justify-content-center',
+  'align-items-center',
+  'flex-wrap'
+);
 
 var current_page = 1;
 var dataCount = 10;
@@ -101,8 +107,7 @@ var dataCount = 10;
 let prev = document.createElement('btn');
 prev.innerText = 'Previous';
 prev.id = 'Previous';
-prev.classList.add('btn');
-prev.classList.add('btn-outline-secondary');
+prev.classList.add('btn', 'btn-outline-secondary');
 pager.append(prev);
 
 let page_count = Math.ceil(mockData.length / dataCount);
@@ -112,8 +117,7 @@ for (let i = 0; i < page_count; i++) {
   let num = document.createElement('btn');
   num.innerText = `${i + 1}`;
   num.id = `${i + 1}`;
-  num.classList.add('btn');
-  num.classList.add('btn-outline-secondary');
+  num.classList.add('btn', 'btn-outline-secondary');
   num.classList.add('m-1');
   pager.append(num);
   if (i == 0) {
@@ -126,8 +130,7 @@ for (let i = 0; i < page_count; i++) {
 let next = document.createElement('btn');
 next.innerText = 'Next';
 next.id = 'Next';
-next.classList.add('btn');
-next.classList.add('btn-outline-secondary');
+next.classList.add('btn', 'btn-outline-secondary');
 pager.append(next);
 
 pager.addEventListener('click', (e) => {

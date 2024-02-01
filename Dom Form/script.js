@@ -95,7 +95,7 @@ formWrapper.innerHTML = `
     </div> 
 
     <div class='col-12'>
-      <p>Choice of food</p>
+      <p>Choice of food (Select only 2 options)</p>
       <div class="form-check"> 
         <label class='form-check-label' for="coffee">Coffee</label>
         <input
@@ -214,30 +214,35 @@ form.addEventListener('submit', function handleForm(e) {
 document.body.append(form);
 
 let tableContainer = document.createElement('div');
-tableContainer.classList.add('mt-5', 'd-flex', 'flex-column');
+tableContainer.classList.add('mt-5');
 
 let tableHeader = document.createElement('h2');
 tableHeader.innerText = 'Table';
-tableHeader.classList.add('align-self-center');
+tableHeader.classList.add('text-center');
 
 let tableWrapper = document.createElement('div');
-tableWrapper.classList.add('table-responsive', 'align-self-center');
+tableWrapper.classList.add(
+  'table',
+  'table-responsive',
+  'd-flex',
+  'justify-content-center'
+);
 
 let table = document.createElement('table');
-table.classList.add('table', 'table-dark', 'table-striped-columns');
+table.classList.add('table', 'table-striped-columns', 'table-dark', 'w-auto');
 
 var thead = document.createElement('thead');
 var tbody = document.createElement('tbody');
 var tr_head = document.createElement('tr');
 tr_head.innerHTML = `
-    <th class=" text-center text-white p-3">First Name</th>
-    <th class=" text-center text-white p-3">Last Name</th>
-    <th class=" text-center text-white p-3">Address</th>
-    <th class=" text-center text-white p-3">Gender</th>
-    <th class=" text-center text-white p-3">Choice of food</th>
-    <th class=" text-center text-white p-3">State</th>
-    <th class=" text-center text-white p-3">Country</th>
-    <th class=" text-center text-white p-3">Pincode</th>
+    <th class=" text-center text-white p-2">First Name</th>
+    <th class=" text-center text-white p-2">Last Name</th>
+    <th class=" text-center text-white p-2">Address</th>
+    <th class=" text-center text-white p-2">Gender</th>
+    <th class=" text-center text-white p-2">Choice of food</th>
+    <th class=" text-center text-white p-2">State</th>
+    <th class=" text-center text-white p-2">Country</th>
+    <th class=" text-center text-white p-2">Pincode</th>
   `;
 thead.append(tr_head);
 table.append(thead, tbody);
@@ -255,14 +260,14 @@ function addData(data) {
   var tr = document.createElement('tr'); //row
 
   tr.innerHTML = `
-    <td class="text-center p-3">${data?.firstname}</td>
-    <td class="text-center p-3">${data?.lastname}</td>
-    <td class="text-center p-3">${data?.address}</td>
-    <td class="text-center p-3">${data?.gender}</td>
-    <td class="text-center p-3">${data?.['choiceoffood'][0]?.value} & ${data?.['choiceoffood'][1]?.value}</td>
-    <td class="text-center p-3">${data?.state}</td>
-    <td class="text-center p-3">${data?.country}</td>
-    <td class="text-center p-3">${data?.pincode}</td>
+    <td class="text-center ">${data?.firstname}</td>
+    <td class="text-center ">${data?.lastname}</td>
+    <td class="text-center ">${data?.address}</td>
+    <td class="text-center ">${data?.gender}</td>
+    <td class="text-center ">${data?.['choiceoffood'][0]?.value} & ${data?.['choiceoffood'][1]?.value}</td>
+    <td class="text-center ">${data?.state}</td>
+    <td class="text-center ">${data?.country}</td>
+    <td class="text-center ">${data?.pincode}</td>
     `;
 
   tbody.append(tr);

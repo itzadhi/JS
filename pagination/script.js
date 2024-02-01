@@ -25,14 +25,17 @@ description.classList.add('text-center');
 let tableWrapper = document.createElement('div');
 tableWrapper.classList.add(
   'table',
-  'table-bordered',
   'table-responsive',
   'd-flex',
   'justify-content-center',
   'mt-4'
 );
 let table = document.createElement('table');
-table.classList.add('table', 'w-auto');
+table.classList.add('table', 'table-bordered', 'w-auto');
+table.id = 'table';
+
+let thead = document.createElement('thead');
+let tbody = document.createElement('tbody');
 
 // let th1 = document.createElement('th');
 // th1.innerText = 'ID';
@@ -55,9 +58,11 @@ tr_head.innerHTML = `
 <th class="table-primary text-center p-3">Email</th>
 `;
 
+thead.append(tr_head);
+
 //Displaying the data in table
 function displayData(data, count, page) {
-  table.appendChild(tr_head);
+  table.appendChild(thead);
 
   for (let i = (0 + 1) * (page - 1) * 10; i < count * page; i++) {
     var tr = document.createElement('tr'); //row
@@ -84,8 +89,9 @@ function displayData(data, count, page) {
 
     //Append
     // tr.append(td1, td2, td3);
-    table.append(tr);
+    tbody.append(tr);
   }
+  table.append(tbody);
 }
 
 tableWrapper.append(table);

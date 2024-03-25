@@ -1,0 +1,25 @@
+.custom-body {
+  background: linear-gradient(to right bottom, #5372f0, #ffbcbc);
+}
+
+.fa-quote-left,
+.fa-quote-right {
+  font-size: 0.9rem;
+  color: rgb(179, 0, 0);
+}
+.quote {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.custom-btn {
+  background: linear-gradient(to right bottom, #5372f0, #ffbcbc);
+  color: #fff;
+  border: 0;
+  outline: 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  text-decoration: none;
+}
